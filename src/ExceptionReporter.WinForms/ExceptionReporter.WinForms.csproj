@@ -6,7 +6,15 @@
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<TargetFrameworks>net5.0-windows</TargetFrameworks>
 	<UseWindowsForms>true</UseWindowsForms>
-    <PackageProjectUrl>https://github.com/PauloHMattos/ExceptionReporter.NET</PackageProjectUrl>
+	<PackageId>ExceptionReporter.NET5</PackageId>
+	<PackageProjectUrl>https://github.com/PauloHMattos/ExceptionReporter.NET</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/PauloHMattos/ExceptionReporter.NET.git</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>exception,error, reporting, reporter</PackageTags>
+	<Version>1.0.4</Version>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Properties\Resources.en.resx" />
@@ -22,18 +30,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
-
-	<PropertyGroup>
-		<PackageId>ExceptionReporter.NET5</PackageId>
-		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<PackageTags>exception,error, reporting, reporter</PackageTags>
-		<RepositoryUrl>https://github.com/PauloHMattos/ExceptionReporter.NET</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-	</PropertyGroup>
   <ItemGroup>
-    <Compile Update="C:\code\ExceptionReporter.NET\ExceptionReporter.Shared\Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
