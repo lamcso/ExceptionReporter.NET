@@ -1,13 +1,13 @@
-﻿namespace ExceptionReporting.Network.Senders
+namespace ExceptionReporting.Shared.Network.Senders
 {
-	internal class GhostSender : IReportSender
+  internal class GhostSender : IReportSender
+  {
+	public void Send(string report)
 	{
-		public void Send(string report)
-		{
-			// do nothing
-		}
-
-		public string Description { get; } = "";
-		public string ConnectingMessage { get; } = "";
+	  // do nothing
 	}
+
+	public string Description { get; } = "";
+	public string ConnectingMessage { get; } = "";
+  }
 }

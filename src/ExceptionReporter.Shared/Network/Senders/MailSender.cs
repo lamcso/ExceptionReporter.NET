@@ -1,31 +1,31 @@
-using ExceptionReporting.Core;
-using ExceptionReporting.Mail;
-using ExceptionReporting.Network.Events;
+using ExceptionReporting.Shared.Core;
+using ExceptionReporting.Shared.Mail;
+using ExceptionReporting.Shared.Network.Events;
 
-namespace ExceptionReporting.Network.Senders
+namespace ExceptionReporting.Shared.Network.Senders
 {
-	internal abstract class MailSender
+  internal abstract class MailSender
+  {
+	protected readonly ExceptionReportInfo _config;
+	protected readonly IReportSendEvent _sendEvent;
+	protected readonly Attacher _attacher;
+
+	protected MailSender(ExceptionReportInfo reportInfo, IReportSendEvent sendEvent, IScreenShooter screenShooter)
 	{
-		protected readonly ExceptionReportInfo _config;
-		protected readonly IReportSendEvent _sendEvent;
-		protected readonly Attacher _attacher;
-
-		protected MailSender(ExceptionReportInfo reportInfo, IReportSendEvent sendEvent, IScreenShooter screenShooter)
-		{
-			_config = reportInfo;
-			_sendEvent = sendEvent;
-			_attacher = new Attacher(reportInfo, screenShooter);
-		}
-
-		public abstract string Description { get; }
-
-		public virtual string ConnectingMessage => $"Connecting {Description}...";
-
-		public string EmailSubject =>
-			_config.EmailReportSubject .Length > 0 ? _config.EmailReportSubject :
-				_config.MainException.Message
-					.Replace('\r', ' ')
-					.Replace('\n', ' ')
-					.Truncate(255) ?? "Exception Report";
+	  _config = reportInfo;
+	  _sendEvent = sendEvent;
+	  _attacher = new Attacher(reportInfo, screenShooter);
 	}
+
+	public abstract string Description { get; }
+
+	public virtual string ConnectingMessage => $"Connecting {Description}...";
+
+	public string EmailSubject =>
+		_config.EmailReportSubject.Length > 0 ? _config.EmailReportSubject :
+			_config.MainException.Message
+				.Replace('\r', ' ')
+				.Replace('\n', ' ')
+				.Truncate(255) ?? "Exception Report";
+  }
 }

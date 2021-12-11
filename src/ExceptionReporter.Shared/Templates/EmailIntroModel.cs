@@ -1,9 +1,9 @@
-﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
-namespace ExceptionReporting.Templates
+namespace ExceptionReporting.Shared.Templates
 {
-	internal class EmailIntroModel
-	{
-		public bool ScreenshotTaken { get; set; }
-	}
+  internal class EmailIntroModel
+  {
+	public bool ScreenshotTaken { get; set; }
+  }
 }

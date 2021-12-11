@@ -1,22 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-		<RootNamespace>ExceptionReporting</RootNamespace>
-		<AssemblyName>ExceptionReporter.NET</AssemblyName>
-		<PackageId>ExceptionReporter</PackageId>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<TargetFrameworks>net40</TargetFrameworks>
-		<ReleaseVersion>5.0</ReleaseVersion>
-		<PackageLicenseUrl></PackageLicenseUrl>
+	<RootNamespace>ExceptionReporting</RootNamespace>
+	<AssemblyName>ExceptionReporter.WinForms</AssemblyName>
+	<PackageId>ExceptionReporter</PackageId>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<TargetFrameworks>net5.0-windows</TargetFrameworks>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ReleaseVersion>5.0</ReleaseVersion>
+	<PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/PandaWood/ExceptionReporter.NET</PackageProjectUrl>
-	</PropertyGroup>
+  </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Properties\Resources.en.resx" />
     <EmbeddedResource Remove="Properties\Resources.ru.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DotNetZip" Version="1.15.0" />
-    <PackageReference Include="Handlebars.Net" Version="1.9.0" />
-    <PackageReference Include="Simple-MAPI.NET" Version="1.2.0" />
   </ItemGroup>
     <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.en.resx">
@@ -27,13 +23,6 @@
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <PropertyGroup>
     <Version>5.0</Version>
@@ -54,7 +43,6 @@ Dependencies Updated:
 - DotNetZip from 1.11 to 1.15
 - Simple-MAPI.NET 1.1 to 1.2</PackageReleaseNotes>
   </PropertyGroup>
-  <Import Project="..\ExceptionReporter.Shared\ExceptionReporter.Shared.projitems" Label="Shared" />
   <ItemGroup>
     <Compile Update="C:\code\ExceptionReporter.NET\ExceptionReporter.Shared\Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -77,5 +65,8 @@ Dependencies Updated:
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExceptionReporter.Shared\ExceptionReporter.Shared.csproj" />
   </ItemGroup>
 </Project>

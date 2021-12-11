@@ -1,11 +1,10 @@
 using System;
 
-namespace ExceptionReporting.Core
+namespace ExceptionReporting.Shared.Core
 {
-	internal class ConfigException : Exception
-	{
-		public ConfigException(string message) : base(message)
-		{ }
-	}
+  internal class ConfigException : Exception
+  {
+	public ConfigException(string message) : base(message) { }
+  }
 
 }
