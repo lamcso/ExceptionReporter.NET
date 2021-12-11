@@ -6,9 +6,7 @@
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<TargetFrameworks>net5.0-windows</TargetFrameworks>
 	<UseWindowsForms>true</UseWindowsForms>
-	<ReleaseVersion>5.0</ReleaseVersion>
-	<PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/PandaWood/ExceptionReporter.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/PauloHMattos/ExceptionReporter.NET</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Properties\Resources.en.resx" />
@@ -25,13 +23,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
-    <Version>5.0</Version>
-    <FileVersion>5.0.0.0</FileVersion>
     <Authors>Peter van der Woude, Simon Cropp</Authors>
     <Description>ExceptionReporter is a .NET UserControl/Dialog that gathers detailed information on an Exception and the application/system running it. It allows the user to copy, save or email a report to the developer</Description>
     <Copyright></Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/PandaWood/ExceptionReporter.NET</RepositoryUrl>
+    <RepositoryUrl>https://github.com/PauloHMattos/ExceptionReporter.NET</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
     <PackageTags>exception,error, reporting, reporter</PackageTags>
